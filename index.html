@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marketing Agency</title>
+
+<title>MarketPro | Digital Marketing Agency</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -17,6 +20,7 @@ scroll-behavior:smooth;
 body{
 background:#f5f5f5;
 color:#333;
+line-height:1.6;
 }
 
 header{
@@ -28,6 +32,8 @@ justify-content:space-between;
 align-items:center;
 position:sticky;
 top:0;
+z-index:1000;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
 }
 
 header h2{
@@ -39,6 +45,11 @@ color:white;
 text-decoration:none;
 margin-left:20px;
 font-weight:bold;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ffc107;
 }
 
 .hero{
@@ -47,58 +58,67 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200");
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600");
 background-size:cover;
 background-position:center;
 color:white;
 text-align:center;
+padding:20px;
 }
 
 .hero h1{
-font-size:55px;
+font-size:60px;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:25px;
+font-size:22px;
+margin-bottom:30px;
+max-width:700px;
 }
 
-button{
+button,
+.btn{
+display:inline-block;
 padding:15px 35px;
 border:none;
 background:#0d6efd;
 color:white;
-cursor:pointer;
-border-radius:8px;
 font-size:18px;
-transition:.4s;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
 }
 
-button:hover{
+button:hover,
+.btn:hover{
 background:#084298;
+transform:scale(1.05);
 }
 
-.services{
+section{
 padding:80px 8%;
-text-align:center;
 }
 
-.services h2{
-margin-bottom:40px;
+h2{
 font-size:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:white;
 padding:25px;
-border-radius:10px;
+border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,.1);
 transition:.4s;
 }
@@ -107,23 +127,28 @@ transition:.4s;
 transform:translateY(-10px);
 }
 
+.card h3{
+margin-bottom:15px;
+color:#0d6efd;
+}
+
 .about{
-padding:80px 8%;
-text-align:center;
 background:white;
+text-align:center;
 }
 
 .contact{
-padding:80px 8%;
 text-align:center;
 }
 
-input,textarea{
+input,
+textarea{
 width:100%;
 padding:15px;
 margin:10px 0;
 border:1px solid #ccc;
 border-radius:8px;
+font-size:16px;
 }
 
 footer{
@@ -133,28 +158,47 @@ text-align:center;
 padding:20px;
 margin-top:40px;
 }
+
 </style>
 
 </head>
+
 <body>
 
 <header>
+
 <h2>MarketPro</h2>
 
 <nav>
+
 <a href="#home">Home</a>
 <a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#testimonials">Testimonials</a>
 <a href="#about">About</a>
 <a href="#contact">Contact</a>
+
 </nav>
 
 </header>
 
 <section class="hero" id="home">
-<h1>Grow Your Business</h1>
-<p>Digital Marketing • SEO • Social Media • Branding</p>
-<button onclick="showMessage()">Get Started</button>
+
+<h1>Grow Your Business Online</h1>
+
+<p>
+We help businesses grow with Digital Marketing,
+SEO, Branding and Social Media Management.
+</p>
+
+<a href="#contact" class="btn">
+Get Started
+</a>
+
 </section>
+
+<!-- Services Section -->
 
 <section class="services" id="services">
 
@@ -163,68 +207,358 @@ margin-top:40px;
 <div class="cards">
 
 <div class="card">
-<h3>SEO</h3>
-<p>Increase your website ranking on Google.</p>
+<h3>Search Engine Optimization</h3>
+<p>
+Improve your website ranking on Google and increase
+organic traffic using modern SEO strategies.
+</p>
 </div>
 
 <div class="card">
-<h3>Social Media</h3>
-<p>Professional marketing on all platforms.</p>
+<h3>Social Media Marketing</h3>
+<p>
+Manage your Facebook, Instagram, LinkedIn, and TikTok
+accounts professionally to reach more customers.
+</p>
 </div>
 
 <div class="card">
-<h3>Branding</h3>
-<p>Create a unique identity for your business.</p>
+<h3>Brand Identity</h3>
+<p>
+Build a strong brand with a unique logo, colors,
+typography, and marketing identity.
+</p>
 </div>
 
 <div class="card">
-<h3>Advertising</h3>
-<p>Launch powerful online campaigns.</p>
+<h3>Online Advertising</h3>
+<p>
+Launch powerful advertising campaigns on Google Ads
+and Meta Ads with measurable results.
+</p>
+</div>
+
+<div class="card">
+<h3>Content Creation</h3>
+<p>
+Create attractive marketing content including posts,
+videos, blogs, and email campaigns.
+</p>
+</div>
+
+<div class="card">
+<h3>Analytics & Reports</h3>
+<p>
+Track campaign performance with detailed reports
+to help improve your marketing decisions.
+</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- Why Choose Us -->
+
+<section class="about" id="why">
+
+<h2>Why Choose MarketPro?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Experienced Team</h3>
+<p>
+Our specialists have years of experience helping
+businesses grow through digital marketing.
+</p>
+</div>
+
+<div class="card">
+<h3>Creative Ideas</h3>
+<p>
+Every campaign is designed specifically for your
+business and target audience.
+</p>
+</div>
+
+<div class="card">
+<h3>Affordable Pricing</h3>
+<p>
+Professional marketing solutions at competitive prices
+for startups and large companies.
+</p>
+</div>
+
+<div class="card">
+<h3>Fast Support</h3>
+<p>
+Our support team is available whenever you need help
+or have questions about your campaigns.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Portfolio Section -->
+
+<section class="services" id="portfolio">
+
+<h2>Our Recent Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Fashion Brand Campaign</h3>
+<p>
+Developed a complete digital marketing strategy that
+increased online sales by 45% within three months.
+</p>
+</div>
+
+<div class="card">
+<h3>Restaurant Promotion</h3>
+<p>
+Created engaging social media campaigns that reached
+more than 300,000 potential customers.
+</p>
+</div>
+
+<div class="card">
+<h3>Startup Launch</h3>
+<p>
+Designed a complete branding identity including logo,
+website, and digital advertising campaign.
+</p>
+</div>
+
+<div class="card">
+<h3>E-Commerce Store</h3>
+<p>
+Improved SEO performance and reduced advertising costs
+while increasing website traffic and conversions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section class="about" id="testimonials">
+
+<h2>What Our Clients Say</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<p>
+★★★★★
+<br><br>
+"MarketPro completely transformed our online presence.
+Our sales increased significantly within weeks."
+</p>
+
+<br>
+
+<h4>Sarah Johnson</h4>
+
+</div>
+
+<div class="card">
+
+<p>
+★★★★★
+<br><br>
+"Professional team, creative ideas, and excellent
+communication throughout the project."
+</p>
+
+<br>
+
+<h4>David Williams</h4>
+
+</div>
+
+<div class="card">
+
+<p>
+★★★★★
+<br><br>
+"They exceeded our expectations and delivered
+outstanding marketing results."
+</p>
+
+<br>
+
+<h4>Ahmed Ali</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- About -->
 
 <section class="about" id="about">
+
 <h2>About Us</h2>
-<br>
+
 <p>
-We are a creative digital marketing agency helping companies
-grow through modern marketing strategies.
+
+MarketPro is a modern digital marketing agency dedicated
+to helping businesses grow in today's competitive online
+environment.
+
+<br><br>
+
+Our team specializes in Search Engine Optimization (SEO),
+Social Media Management, Branding, Content Creation,
+Google Ads, Meta Ads, and website growth strategies.
+
+<br><br>
+
+We combine creativity with data-driven marketing
+techniques to create campaigns that deliver measurable
+results.
+
+<br><br>
+
+Whether you are launching a startup or expanding an
+existing business, our mission is to help you build a
+strong digital presence, attract more customers, and
+increase your revenue.
+
+<br><br>
+
+We believe every business deserves a customized marketing
+strategy tailored to its goals, industry, and audience.
+
 </p>
+
 </section>
+
+<!-- Contact Section -->
 
 <section class="contact" id="contact">
 
-<h2>Contact us</h2>
+<h2>Contact Us</h2>
 
-<input type="text" placeholder="Your Name">
+<p>
+Have a project in mind? We'd love to hear from you.
+Fill out the form below and our team will contact you as soon as possible.
+</p>
 
-<input type="email" placeholder="Email">
+<br>
 
-<textarea rows="5" placeholder="Message"></textarea>
+<input
+type="text"
+id="name"
+placeholder="Your Name"
+required>
 
-<button onclick="send()">Send Message</button>
+<input
+type="email"
+id="email"
+placeholder="Your Email"
+required>
+
+<textarea
+id="message"
+rows="6"
+placeholder="Tell us about your project..."
+required>
+</textarea>
+
+<button onclick="send()">
+Send Message
+</button>
+
 </section>
+
+<!-- Footer -->
 
 <footer>
 
-<p>© 2026 MarketPro. All Rights Reserved.</p>
+<h3>MarketPro</h3>
+
+<p>
+Helping businesses grow through creative digital marketing solutions.
+</p>
+
+<br>
+
+<p>
+
+📧 Email: info@marketpro.com
+
+<br><br>
+
+📞 Phone: +20 100 000 0000
+
+<br><br>
+
+📍 Shibin El Kom, Egypt
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 MarketPro. All Rights Reserved.
+
+</p>
 
 </footer>
 
 <script>
 
-function showMessage(){
-alert("Welcome to MarketPro!");
+function send() {
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    alert(
+        "Thank you, " +
+        name +
+        "! Your message has been sent successfully. We will contact you soon."
+    );
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
 }
 
-function send(){
+window.addEventListener("scroll", function () {
 
-alert("Your message has been sent successfully.");
+    const header = document.querySelector("header");
 
-}
+    if (window.scrollY > 30) {
+        header.style.background = "#084298";
+    } else {
+        header.style.background = "#0d6efd";
+    }
+
+});
 
 </script>
 
