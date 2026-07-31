@@ -41,16 +41,6 @@ No installation or extra tools are needed.
 
 ---
 
-## Project Structure
-
-```
-MarketPro/
-├── index.html
-└── README.md
-```
-
----
-
 ## Changes Made
 
 - Improved the overall layout.
